@@ -9,6 +9,8 @@ While it's true that in the era of modern web development CSS browser compatibil
 
 ## Project structure
 
+- [main.min.css](/css/main.min.css): This is the file that includes all the style rules
+
 ## How to use it
 
 ### If you decide that you want to use my stylesheets without any modifications
