@@ -1,0 +1,37 @@
+@import './variables';
+@import './color-themes';
+@import './reduced-motion';
+@import './print.scss';
+@import './reset.scss';
+
+.header-main {
+	background-color: var(--color-background-primary-dark);
+	color: var(--color-foreground-primary-dark);
+}
+
+.header-page-specific {
+	background-color: var(--color-background-secondary-dark);
+	color: var(--color-foreground-secondary-dark);
+}
+
+:is(.navigation-main, .navigation-page-specific, footer) {
+	grid-template-columns: auto 1fr auto;
+	max-width: var(--container-laptop);
+	padding: var(--spacing-1x);
+	width: 100%;
+	column-gap: 3.2rem;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.navigation-page-specific h1 {
+	font-size: clamp(2rem, 1.8rem + 0.71vw, 2.8rem);
+	line-height: 1;
+}
+
+body header:last-of-type {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}

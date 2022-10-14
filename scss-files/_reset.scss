@@ -1,0 +1,169 @@
+/* Set core root defaults */
+html {
+	font-size: 62.5%;
+	&:focus-within {
+		scroll-behavior: smooth;
+	}
+}
+/* End set core root defaults */
+
+/* Set default styles for all elements */
+:is(*, *::before, *::after) {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+/* End set default styles for all elements */
+
+/* Set elements to display grid and assign them a default style */
+:is(section, div, nav, aside, article, ul, ol, nav, menu) {
+	display: grid;
+	row-gap: var(--spacing-1x);
+	justify-self: center;
+}
+
+div {
+	padding: 0 var(--spacing-1x);
+}
+/* End set elements to display grid and assign them a default style */
+
+/* Set styles for body and main */
+:is(body, main) {
+	display: grid;
+}
+
+body {
+	min-height: 100vh;
+	font-family: var(--font-family-primary);
+	font-size: clamp(1.6rem, 1.536rem + 0.18vw, 1.8rem);
+	font-weight: 500;
+	color: var(--color-foreground-primary);
+	background-color: var(--color-background-primary);
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	grid-template-rows: auto auto 1fr auto;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
+main {
+	margin: var(--spacing-5x) 0;
+	row-gap: var(--spacing-4x);
+}
+/* End set styles for body and main */
+
+/* Set styles for text elements */
+:is(section, article) {
+	max-width: 75ch;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: clamp(2.8rem, 2.2rem + 1.79vw, 4.8rem);
+}
+
+h2 {
+	font-size: clamp(2.4rem, 2rem + 1.07vw, 3.6rem);
+}
+
+h3 {
+	font-size: clamp(2rem, 1.8rem + 0.71vw, 2.8rem);
+}
+
+:is(h4, h5, h6) {
+	font-size: clamp(1.8rem, 1.8rem + 0.18vw, 2rem);
+}
+
+h2:not(:first-child) {
+	margin-top: var(--spacing-2x);
+}
+
+h3:not(:first-child) {
+	margin-top: var(--spacing-1x);
+}
+
+:is(p, li, a, h1, h2, h3, h4, h5, h6, figcaption, caption, blockquote, dt, dd, span, abbr, b, bdi, bdo, cite, code, data, dfn, em, i, mark, rt, ruby, s, samp, small, strong, sub, sup, time, u, var, wbr, th, td) {
+	overflow-wrap: break-word;
+	hyphens: auto;
+	text-align: start;
+	font-synthesis: none;
+}
+
+a {
+	color: var(--color-foreground-link-text);
+	cursor: pointer;
+	overflow-wrap: anywhere;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+:is(input, button, textarea, select) {
+	font: inherit;
+}
+
+:is(ol, ul) {
+	row-gap: var(--spacing-1x);
+	padding-inline-start: 2ch;
+}
+
+:is(ul[role='list'], ol[role='list']) {
+	list-style: none;
+}
+
+ol:not([class]) li,
+ul:not([class]) li {
+	position: relative;
+	line-height: 1.35;
+}
+
+li img,
+p img {
+	display: inline-block;
+	vertical-align: sub;
+}
+
+caption {
+	font-size: clamp(2rem, 1.8rem + 0.71vw, 2.8rem);
+	margin: var(--spacing-1x) 0;
+}
+
+figcaption {
+	padding: var(--spacing-1x);
+	background-color: var(--color-foreground-secondary);
+	color: var(--color-background-secondary);
+}
+
+hr {
+	border-top: 1px solid var(--color-foreground-primary);
+	margin: var(--spacing-3x) 0;
+}
+
+mark {
+	background-color: var(--color-foreground-primary);
+	color: var(--color-background-primary);
+	padding: 0 0.4rem;
+}
+/* End set styles for text elements */
+
+/* Make multimedia elements easier to work with */
+:is(img, picture, video, iframe, audio, map, embed, object, svg, canvas, audio) {
+	display: block;
+	height: auto;
+	max-width: 100%;
+	width: 100%;
+}
+
+iframe {
+	border: 0;
+}
+/* End make multimedia elements easier to work with */

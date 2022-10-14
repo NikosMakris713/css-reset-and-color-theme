@@ -1,0 +1,171 @@
+/* Make animation for color scheme switcher button dark*/
+@mixin theme-toggle-animation-dark {
+	.sun-and-moon {
+		& > .sun {
+			transform: scale(1.75);
+			transition-timing-function: ease-in-out;
+			transition-duration: 0.25s;
+		}
+
+		& > .sun-beams {
+			opacity: 0;
+			transform: rotateZ(-25deg);
+			transition: transform 0.5s ease-in-out;
+		}
+		& > .moon > circle {
+			transform: translateX(-7px);
+			transition-delay: 0.25s;
+			transition-duration: 0.5s;
+
+			@supports (cx: 1) {
+				transform: translateX(0);
+				cx: 17;
+			}
+		}
+	}
+}
+/* End make animation for color scheme switcher button dark*/
+
+.sun-and-moon {
+	& > :is(.moon, .sun, .sun-beams) {
+		transform-origin: center center;
+	}
+
+	& > :is(.moon, .sun) {
+		fill: var(--color-foreground-primary-dark);
+	}
+
+	& > .sun {
+		transition: transform 0.5s ease-in-out;
+	}
+
+	& > .sun-beams {
+		stroke: var(--color-foreground-primary-dark);
+		stroke-width: 2px;
+		transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+		transition-delay: 0.25s;
+	}
+
+	& > .moon > circle {
+		transition-duration: 0.25s;
+	}
+}
+
+/* Set default color scheme */
+:root {
+	color-scheme: light;
+	--color-foreground-primary: var(--color-foreground-primary-light);
+	--color-foreground-secondary: var(--color-foreground-secondary-light);
+	--color-background-primary: var(--color-background-primary-light);
+	--color-background-secondary: var(--color-background-secondary-light);
+	--color-link-foreground: var(--color-link-foreground-light);
+	--color-state-hover-foreground: var(--color-state-hover-foreground-light);
+	--color-state-info-background: var(--color-state-info-background-light);
+	--color-state-info-foreground: var(--color-state-info-foreground-light);
+	--color-state-good-foreground: var(--color-state-good-foreground-light);
+	--color-state-good-background: var(--color-state-good-background-light);
+	--color-state-warn-foregound: var(--color-state-warn-foregound-light);
+	--color-state-warn-background: var(----color-state-warn-background-light);
+	--color-state-bad-foreground: var(--color-state-bad-foreground-light);
+	--color-state-bad-background: var(--color-state-bad-background-light);
+}
+/* End set default color scheme */
+
+/* Set dark color scheme when the user chooses so from OS or User Agen settings*/
+@media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: dark;
+		--color-foreground-primary: var(--color-foreground-primary-dark);
+		--color-foreground-secondary: var(--color-foreground-secondary-dark);
+		--color-background-primary: var(--color-background-primary-dark);
+		--color-background-secondary: var(--color-background-secondary-dark);
+		--color-link-foreground: var(--color-link-foreground-dark);
+		--color-state-hover-foreground: var(--color-state-hover-foreground-dark);
+		--color-state-info-background: var(--color-state-info-background-dark);
+		--color-state-info-foreground: var(--color-state-info-foreground-dark);
+		--color-state-good-foreground: var(--color-state-good-foreground-dark);
+		--color-state-good-background: var(--color-state-good-background-dark);
+		--color-state-warn-foregound: var(--color-state-warn-foregound-dark);
+		--color-state-warn-background: var(----color-state-warn-background-dark);
+		--color-state-bad-foreground: var(--color-state-bad-foreground-dark);
+		--color-state-bad-background: var(--color-state-bad-background-dark);
+	}
+	html:not([color-scheme='light']) {
+		@include theme-toggle-animation-dark();
+	}
+}
+/* End set dark color scheme when the user chooses so from OS or User Agen settings*/
+
+/* Set dark color scheme when user chooses so from the Web Application*/
+[color-scheme='dark'] {
+	color-scheme: dark;
+	--color-foreground-primary: var(--color-foreground-primary-dark);
+	--color-foreground-secondary: var(--color-foreground-secondary-dark);
+	--color-background-primary: var(--color-background-primary-dark);
+	--color-background-secondary: var(--color-background-secondary-dark);
+	--color-link-foreground: var(--color-link-foreground-dark);
+	--color-state-hover-foreground: var(--color-state-hover-foreground-dark);
+	--color-state-info-background: var(--color-state-info-background-dark);
+	--color-state-info-foreground: var(--color-state-info-foreground-dark);
+	--color-state-good-foreground: var(--color-state-good-foreground-dark);
+	--color-state-good-background: var(--color-state-good-background-dark);
+	--color-state-warn-foregound: var(--color-state-warn-foregound-dark);
+	--color-state-warn-background: var(----color-state-warn-background-dark);
+	--color-state-bad-foreground: var(--color-state-bad-foreground-dark);
+	--color-state-bad-background: var(--color-state-bad-background-dark);
+	@include theme-toggle-animation-dark();
+}
+/* End set dark color scheme when user chooses so from the Web Application*/
+
+/* Set light color scheme when user chooses so from the Web Application*/
+[color-scheme='light'] {
+	color-scheme: light;
+	--color-foreground-primary: var(--color-foreground-primary-light);
+	--color-foreground-secondary: var(--color-foreground-secondary-light);
+	--color-background-primary: var(--color-background-primary-light);
+	--color-background-secondary: var(--color-background-secondary-light);
+	--color-link-foreground: var(--color-link-foreground-light);
+	--color-state-hover-foreground: var(--color-state-hover-foreground-light);
+	--color-state-info-background: var(--color-state-info-background-light);
+	--color-state-info-foreground: var(--color-state-info-foreground-light);
+	--color-state-good-foreground: var(--color-state-good-foreground-light);
+	--color-state-good-background: var(--color-state-good-background-light);
+	--color-state-warn-foregound: var(--color-state-warn-foregound-light);
+	--color-state-warn-background: var(----color-state-warn-background-light);
+	--color-state-bad-foreground: var(--color-state-bad-foreground-light);
+	--color-state-bad-background: var(--color-state-bad-background-light);
+}
+/* End set light color scheme when user chooses so from the Web Application*/
+
+.theme-toggle {
+	background: none;
+	border: none;
+	padding: 0;
+	inline-size: var(--button-color-scheme-switcher-size);
+	block-size: var(--button-color-scheme-switcher-size);
+	aspect-ratio: 1;
+	border-radius: 50%;
+	cursor: pointer;
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: transparent;
+	outline-offset: 5px;
+
+	& > svg {
+		inline-size: 100%;
+		block-size: 100%;
+		stroke-linecap: round;
+	}
+
+	& :is(:hover, :focus-visible) {
+		:is(.moon, .sun) {
+			fill: wheat;
+		}
+		.sun-beams {
+			stroke: wheat;
+		}
+	}
+
+	@media (hover: none) {
+		--size: calc(var(--button-color-scheme-switcher-size) + 0.2rem);
+	}
+}

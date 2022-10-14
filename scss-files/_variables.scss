@@ -1,0 +1,48 @@
+:root {
+	--font-family-primary: 'Montserrat', sans-serif;
+	--container-laptop: 144rem;
+	--container-4k: 256rem;
+	--spacing-1x: clamp(1.6rem, 1.536rem + 0.18vw, 1.8rem);
+	--spacing-2x: clamp(3.2rem, 1.536rem + 0.18vw, 3.6rem);
+	--spacing-3x: clamp(4.8rem, 1.536rem + 0.18vw, 5.4rem);
+	--spacing-4x: clamp(6.4rem, 1.536rem + 0.18vw, 7.2rem);
+	--spacing-5x: clamp(8rem, 1.536rem + 0.18vw, 9rem);
+
+	/* Set light color scheme styles */
+	--color-foreground-primary-light: #1a1a1a;
+	--color-foreground-secondary-light: #333333;
+	--color-background-primary-light: #fff;
+	--color-background-secondary-light: #f2f2f2;
+	--color-link-foreground-light: #0066cc;
+	--color-state-hover-foreground-light: #000;
+	--color-state-info-background-light: #deeafd;
+	--color-state-info-foreground-light: #174ea6;
+	--color-state-good-foreground-light: #0d652d;
+	--color-state-good-background-light: #e9f6ed;
+	--color-state-warn-foregound-light: #c34900;
+	--color-state-warn-background-light: #fff5e3;
+	--color-state-bad-foreground-light: #a50e0e;
+	--color-state-bad-background-light: #fce8e8;
+	/* End set light color scheme styles */
+
+	/* Set dark color scheme styles */
+	--color-foreground-primary-dark: #fff;
+	--color-foreground-secondary-dark: #f2f2f2;
+	--color-background-primary-dark: #1a1a1a;
+	--color-background-secondary-dark: #333333;
+	--color-link-foreground-dark: #9da2ff;
+	--color-state-hover-foreground-dark: #fff;
+	--color-state-info-foreground-dark: #deeafd;
+	--color-state-info-background-dark: #2c333f;
+	--color-state-good-foreground-dark: #e2faed;
+	--color-state-good-background-dark: #283532;
+	--color-state-warn-foregound-dark: #fffcf2;
+	--color-state-warn-background-dark: #3b372b;
+	--color-state-bad-foreground-light: #ffe9e8;
+	--color-state-bad-background-light: #3b2d30;
+	/* End set dark color scheme styles */
+
+	/* Set size for color scheme switcher button */
+	--button-color-scheme-switcher-size: clamp(2rem, 1.8rem + 0.71vw, 2.8rem);
+	/* End set size for color scheme switcher button */
+}

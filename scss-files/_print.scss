@@ -1,0 +1,17 @@
+@page {
+	/* FIXME: Define the right default values for page properties. */
+	size: auto;
+	margin: auto;
+	padding: 0px;
+	border-width: 0px;
+}
+
+/* Allows thead sections to print at the top of each page. */
+@media print {
+	thead {
+		break-inside: avoid;
+	}
+	tfoot {
+		break-inside: avoid;
+	}
+}
