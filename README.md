@@ -32,4 +32,4 @@ You can simply copy the contents of the [main.min.css](/css/main.min.css) file a
 ### If you decide you want to make some changes to the stylesheets , you have two options
 
 1.    You can edit the style rules in the [main.min.css](/css/main.min.css) and use the edited file for your project.
-2.    You can install the vscode extension [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) and edit the .scss files according to your needs.
+2.    You can use the vscode extension [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) and edit the .scss files or even add / remove them according to your project's needs.
