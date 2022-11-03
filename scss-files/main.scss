@@ -35,3 +35,17 @@ body header:last-of-type {
 	left: 0;
 	z-index: 2;
 }
+
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: var(--color-background-primary);
+	color: var(--color-foreground-primary);
+	padding: 8px;
+	z-index: 100;
+}
+
+.skip-link:focus {
+	top: 0;
+}
