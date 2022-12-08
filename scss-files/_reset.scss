@@ -78,15 +78,56 @@ h3 {
 	font-size: clamp(1.8rem, 1.8rem + 0.18vw, 2rem);
 }
 
-h2:not(:first-child) {
+section h2:not(:first-child) {
 	margin-top: var(--spacing-2x);
 }
 
-h3:not(:first-child) {
+section h3:not(:first-child) {
 	margin-top: var(--spacing-1x);
 }
 
-:is(p, li, a, h1, h2, h3, h4, h5, h6, figcaption, caption, blockquote, dt, dd, span, abbr, b, bdi, bdo, cite, code, data, dfn, em, i, mark, rt, ruby, s, samp, small, strong, sub, sup, time, u, var, wbr, th, td) {
+:is(
+		p,
+		li,
+		a,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		figcaption,
+		caption,
+		blockquote,
+		dt,
+		dd,
+		span,
+		abbr,
+		b,
+		bdi,
+		bdo,
+		cite,
+		code,
+		data,
+		dfn,
+		em,
+		i,
+		mark,
+		rt,
+		ruby,
+		s,
+		samp,
+		small,
+		strong,
+		sub,
+		sup,
+		time,
+		u,
+		var,
+		wbr,
+		th,
+		td
+	) {
 	overflow-wrap: break-word;
 	hyphens: auto;
 	text-align: start;
